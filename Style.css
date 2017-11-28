@@ -1,0 +1,68 @@
+
+
+
+
+.parent{
+    width:200px;
+    height:250px;
+    position:absolute;
+    z-index:0;
+}
+
+.inner{
+    position: absolute;
+    top: 1%;
+    left: 1px;
+}
+
+.inner2{
+    position: absolute;
+    top: 1%;
+    left: 1px;
+}
+
+#Cheese {
+    visibility: hidden;
+}
+
+.inner3{
+    position: absolute;
+    top: 1%;
+    left: 1px;
+}
+
+#Pep {
+    visibility: hidden;
+}
+
+.inner4 {
+    position: absolute;
+    top: 1%;
+    left: 1px;
+}
+
+#Sausage{
+    visibility: hidden;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 15px;
+}
+
+th, td {
+    padding: 15px;
+}
+
+th {
+    text-align: center;
+}
+
+table {
+    border-spacing: 5px;
+}
+
+.OrderList{
+    visibility: hidden;
+}

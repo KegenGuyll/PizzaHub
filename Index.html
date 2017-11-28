@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Testing out JavaScript">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Kegen Guyll">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script src="Main.js"></script>
+    <title>Pizza-Hub</title>
+
+</head>
+<body>
+<div class="Parent">
+    <img src="Pizza.png" alt="pizza" height="276" width="500" class ="Pizza">
+    <div class="inner"><
+        <img src="Sauce.png" alt="pizza" height="276" width="500">
+            <div class="inner2">
+                <img src="Cheese.png" alt="pizza" height="276" width="500" id="Cheese">
+                    <div class="inner3">
+                        <img src="Pepp.png" alt="pizza" height="276" width="500" id="Pep">
+                            <div class="inner4">
+                                <img src="Sausage.png" alt="pizza" height="276" width="500" id="Sausage">
+                         </div>
+                    </div>
+            </div>
+    </div>
+</div>
+<h3 id ="pizzaSizeText">...</h3>
+<h1>Pizza Size</h1>
+<div class ="Size">
+    <form>
+        <input type="radio" name="Size" onclick="check(this.value)" value="Small"> Small<br>
+        <input type="radio" name="Size" onclick="check(this.value)" value="Medium"> Medium<br>
+        <input type="radio" name="Size" onclick="check(this.value)" value="Large"> Large<br>
+        Your Pizza size is: <input type="text" id="answer1" size="20">
+    </form>
+</div>
+<h1>Pizza Topping</h1>
+<div class = "Topping">
+    <form>
+        <input type="checkbox" name="Topping" id="checkcheese" onclick="check2(this.value)"value="Cheese"> Cheese<br>
+        <input type="checkbox" name="Topping" id="checkpep"onclick="check2(this.value)" value="Pepperoni"> Pepperoni<br>
+        <input type="checkbox" name="Topping" id="checksau"onclick="check2(this.value)"value="Sausage"> Sausage<br>
+        Your Pizza topping is: <input type="text" id="answer2" size="20">
+    </form>
+</div>
+<div class="Order">
+    <button type="button" id="Order" onclick="order(this.value)">Order</button>
+</div>
+<div class="OrderList">
+    <button type="button" id="OrderList" onclick="location.href='PizzaTable.html'" >Orderlist</button><br>
+</div>
+
+<table style ="width: 100%">
+<tr class="Heading">
+    <td>Pizza Size</td>
+    <td>Pizza Topping</td>
+    <td>Pizza Cost</td>
+</tr>
+<tr>
+    <td id="Size">...</td>
+    <td id="Topping">...</td>
+    <td id="Cost">...</td>
+</tr>
+</table>
+</body>
+</html>
