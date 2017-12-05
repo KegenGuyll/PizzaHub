@@ -119,13 +119,11 @@ const check2 = (Topping) => {
     orderCount++;
     console.log(orderCount);
     alert("You have orderd " + orderCount + " Pizza(s)");
-    document.getElementById("Size").innerHTML = localStorage.getItem(size);
-    document.getElementById("Topping").innerHTML = localStorage.getItem(topping);
 
     if (s == true){
         localStorage.setItem("Small",size);
-        smallprice = 5.75;
-        Cost += smallprice;
+        smallprice = 2.30;
+        Cost = smallprice;
         orderCost();
     }
     else
@@ -135,8 +133,8 @@ const check2 = (Topping) => {
 
     if (m == true){
         localStorage.setItem("Medium",size);
-        mediumprice = 7.75;
-        Cost += mediumprice;
+        mediumprice = 4.15;
+        Cost = mediumprice;
         orderCost()
     }
     else
@@ -146,8 +144,8 @@ const check2 = (Topping) => {
 
     if (l == true){
         localStorage.setItem("Large",size);
-        largeprice = 10.75;
-        Cost += largeprice;
+        largeprice = 7.23;
+        Cost = largeprice;
         orderCost()
     }
     else
@@ -158,19 +156,64 @@ const check2 = (Topping) => {
 
 
 
+function Addrow() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = "...";
+    cell2.innerHTML = "...";
+    cell3.innerHTML = "...";
+    cell1.setAttribute('id','Size');
+    cell2.setAttribute('id','Topping');
+    cell3.setAttribute('id','Cost');
+  }
+
+function printorder() {
+    document.getElementById("Size").innerHTML = localStorage.getItem(size);
+    document.getElementById("Topping").innerHTML = localStorage.getItem(topping);
+}
+
+
+
 function orderCost()
 {
+
  if (size.includes("Small"))
     {
+        printorder();
         document.getElementById("Cost").innerHTML = "$" + Cost;
+
     }
 
  if (size.includes("Medium"))
     {
+        printorder();
         document.getElementById("Cost").innerHTML = "$" + Cost;
     }
  if (size.includes("Large"))
     {
+        printorder();
         document.getElementById("Cost").innerHTML = "$" + Cost;
     }
+    var i = 0;
+    if (i == 0)
+    {
+        var totalcost = Cost;
+        i++;
+        console.log("i = 0");
+    }
+    console.log("cost before: " + Cost);
+    if (i >= 2)
+    {
+        totalcost += Cost;
+        console.log("i > 0")
+    }
+
+    console.log("cost after: " + Cost);
+    Addrow();
+    Cost = 0;
+    document.getElementById("totalcost").innerHTML = totalcost;
 }
+
